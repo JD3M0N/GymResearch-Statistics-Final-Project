@@ -77,10 +77,10 @@ plt.show()
 
 #Estimacion de Parametros
 def confidence_interval(data_column, confidence=0.95):
-    """
-    Calcula el intervalo de confianza para la media de una columna numérica.
-    Retorna la media, el límite inferior y el límite superior.
-    """
+
+    #Calcula el intervalo de confianza para la media de una columna numérica.
+    #Retorna la media, el límite inferior y el límite superior.
+
     n = len(data_column.dropna())  # Número de observaciones sin valores nulos
     mean = data_column.mean()  # Media muestral
     std_err = data_column.std(ddof=1) / (n ** 0.5)  # Error estándar de la media
@@ -218,7 +218,7 @@ plt.show()
 
 
 # Definir variables predictoras (X) y la variable dependiente (y)
-predictors = ['Avg_BPM', 'Workout_Frequency (days/week)', 'Session_Duration (hours)', 'Weight (kg)', 'Experience_Level']
+predictors = ['Avg_BPM', 'Weight (kg)', 'Session_Duration (hours)']
 X = data[predictors]
 y = data['Calories_Burned']
 
